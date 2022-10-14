@@ -17,13 +17,16 @@ const RegistroProvider = ({children})=>{
             return
         }
         try {
-            await clienteAxios.post('/registro', {nombre, email, password})
+            const{data} =await clienteAxios.post('/registro', {nombre, email, password})
             setAlerta({
                 error: false,
-                msg:'Se registró correctamente'
+                msg:data.msg
             })
         } catch (error) {
-            console.log(error)
+            setAlerta({
+                error: true,
+                msg: error.response.data.msg
+            })
         }
     }
     return (
