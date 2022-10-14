@@ -32,6 +32,7 @@ const AuthProvider = ({children})=>{
             navigate('/galeria');
             setPassword('');
         } catch (error) {
+            console.log('este es el error', error)
             setAlerta({
                 error:true,
                 msg:error.response.data.msg
