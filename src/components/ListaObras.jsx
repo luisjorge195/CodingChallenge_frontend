@@ -99,7 +99,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            {loader ? (<div className="spinner"></div>) : (
+            {loader ? ((<div className="spinner"></div>) && <h1 className="text-center text-3xl text-black">No hay coincidencias con tu busqueda</h1>) : (
             <div className="grid lg:grid-cols-4 ml-14 my-14 gap-10 mr-14 md:grid-cols-3 xs:grid-cols-2 ">
                 {
                     ((autor.includes(' ')) ? coleccionObras : coleccionTitulos).map((item,index) => (

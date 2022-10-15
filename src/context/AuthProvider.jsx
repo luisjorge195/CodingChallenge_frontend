@@ -31,9 +31,8 @@ const AuthProvider = ({children})=>{
             setToken(data.token);
             navigate('/galeria');
             setPassword('');
+            
         } catch (error) {
-            console.log('este es el error', error)
-            console.log('este es el otro', import.meta.env.VITE_URL_BACK)
             setAlerta({
                 error:true,
                 msg:error.response.data.msg

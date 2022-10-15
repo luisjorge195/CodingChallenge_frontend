@@ -11,7 +11,7 @@ const Login = () => {
     
     setTimeout(()=>{
       setAlerta('')
-    },3000)
+    },4000)
 
     return (
         <div className="flex h-screen md:bg-[url('assets/galery.jpg')] md:bg-cover  ">

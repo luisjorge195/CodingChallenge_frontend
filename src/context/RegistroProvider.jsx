@@ -22,6 +22,9 @@ const RegistroProvider = ({children})=>{
                 error: false,
                 msg:data.msg
             })
+            setNombre(' ');
+            setEmail(' ');
+            setPassword(' ');
         } catch (error) {
             setAlerta({
                 error: true,
@@ -35,7 +38,10 @@ const RegistroProvider = ({children})=>{
                 handleRegistro,
                 setEmail,
                 setPassword,
-                setNombre
+                setNombre,
+                email,
+                nombre,
+                password
             }}
         >
             {children}

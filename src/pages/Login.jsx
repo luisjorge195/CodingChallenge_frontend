@@ -7,8 +7,12 @@ const Login = () => {
 
     const { email, password, setEmail, setPassword, handleSubmit} = useAuth();
     const { alerta, setAlerta } = useAlerta();
-    const { msg }= alerta
+    const { msg }= alerta;
 
+    setTimeout(()=>{
+        setAlerta('');
+    },4000);
+    
     return (
         <div className="flex h-screen md:bg-[url('assets/galery.jpg')] md:bg-cover  ">
             <div className="m-auto md:bg-black opacity-80 brigthnes-60 md:p-10  rounded-xl  border-black md:border-0  sm:bg-white sm:p-5 p-4">

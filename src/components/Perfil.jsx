@@ -47,8 +47,8 @@ const Perfil = () => {
                         <FontAwesomeIcon onClick = {cerrarSesion}className="text-white mb-3 text-3xl mt-4 cursor-pointer mr-14" icon={faArrowRightFromBracket} />
                     </div>
                 </div>
-                <div className="bg-gray-400 md:h-10">
-                    <p className="text-white font-bold md:text-2xl text-center md:mt-2">Acá se encuentra tu lista de obras y autores favoritos</p>
+                <div className="bg-gray-400 md:h-10  md:-mt-4">
+                    <p className="text-white font-bold md:text-2xl text-center md:p-2 md:mt-2">Acá se encuentra tu lista de obras y autores favoritos</p>
                 </div>
 
             </div>
