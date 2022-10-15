@@ -17,26 +17,28 @@ const AuthProvider = ({children})=>{
     ///Funcion de logueo usuario
     const handleSubmit = async(e, setAlerta)=>{
         e.preventDefault();
-       
-        if([email, password].includes('')){
-            setAlerta({
-                error: true,
-                msg:'Todos los campos son obligatorios'
-            })
-            return
+        const temporizador = ()=>{
+            setTimeout(()=>{
+                setAlerta('')
+            },4000)
         }
+        
+        if ([email, password].includes('')) return ((setAlerta({ error: true, msg: 'Todos los campos son obligatorios' })), temporizador());
+           
+       
+        
         try {
             const { data } = await clienteAxios.post('/login', {email,password});
             setNombre(data.nombre)
             setToken(data.token);
             navigate('/galeria');
-            setPassword('');
             
         } catch (error) {
             setAlerta({
                 error:true,
                 msg:error.response.data.msg
             })
+            temporizador()
         }
       
         
@@ -53,7 +55,7 @@ const AuthProvider = ({children})=>{
                 setPassword,
                 handleSubmit,
                 token,
-                nombre
+                nombre,
             }}
         >
             {children}

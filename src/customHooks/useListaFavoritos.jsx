@@ -9,7 +9,11 @@ const useListaFavoritos = () => {
     const { token } = useAuth();
     const {config } = useRequest();
     const eliminarFavorito = async(e,_id, token, setAlerta)=>{
-
+        const temporizador = ()=>{
+            setTimeout(()=>{
+                setAlerta('')
+            },4000)
+        }
         e.preventDefault()
         try {
            const {data} =  await clienteAxios.delete(`/favoritos/${_id}`, config);
@@ -17,9 +21,14 @@ const useListaFavoritos = () => {
             error:false,
             msg: data.msg
            })
+           temporizador();
 
         } catch (error) {
-            console.log(error)
+            setAlerta({
+                error:true,
+                msg: error.response.data.msg
+            })
+            temporizador()
         }
         
     }

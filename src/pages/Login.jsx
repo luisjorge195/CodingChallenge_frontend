@@ -3,15 +3,14 @@ import Alertas from "../components/Alertas.jsx";
 import useAlerta from "../customHooks/useAlerta";
 import useAuth from "../customHooks/useAuth";
 
+
 const Login = () => {
 
     const { email, password, setEmail, setPassword, handleSubmit} = useAuth();
     const { alerta, setAlerta } = useAlerta();
     const { msg }= alerta;
 
-    setTimeout(()=>{
-        setAlerta('');
-    },4000);
+   
 
     return (
         <div className="flex h-screen md:bg-[url('assets/galery.jpg')] md:bg-cover  ">

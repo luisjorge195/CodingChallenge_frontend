@@ -5,7 +5,6 @@ const PerfilUsuario = () => {
     const{token} = useAuth();
     return (
         <div>{token ? <Outlet /> : <Navigate to="/" />}</div>
-        
     )
 }
 

@@ -19,9 +19,15 @@ const FavoritosProvider = ({children}) => {
         window.addEventListener("scroll",handleScroll )
     },["scroll"])
 
-    const {setAlerta} = useAlerta()
+    const {setAlerta} = useAlerta();
+
+    const temporizador = () =>{
+        setTimeout(()=>{
+            setAlerta('')
+        },4000)
+    }
     
-    const favoritos = async(e, item, token)=>{
+    const favoritos = async(e, item)=>{
         e.preventDefault()
         
         const titulo_obra = item.title;
@@ -35,12 +41,16 @@ const FavoritosProvider = ({children}) => {
                 error: false,
                 msg: data.msg
             })
+            temporizador()
+            
         } catch (error) {
+            
             setAlerta({
                 error: true,
                 msg: error.response.data.msg
             })
-            console.log(error)
+            temporizador()
+           
         }
        
     }

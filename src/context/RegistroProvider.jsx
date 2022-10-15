@@ -8,14 +8,15 @@ const RegistroProvider = ({children})=>{
     const [ nombre, setNombre ] =  useState('');
 
     const handleRegistro = async(e, setAlerta) =>{
-        e.preventDefault()
-        if([nombre, email, password].includes('')){
-            setAlerta({
-                error: true,
-                msg:'todos los campos son obligatorios'
-            })
-            return
+        const temporizador = () =>{
+            setTimeout(()=>{
+                setAlerta('')
+            },4000)
         }
+        e.preventDefault()
+        if([nombre, email, password].includes('')) return ((setAlerta({error:true, msg:'todos los campos son obligatorios'})), temporizador())
+        if (password.length < 6) return ((setAlerta({ error: true, msg: 'La contraseña debe tener al menos 6 caracteres' })), temporizador());
+        
         try {
             const{data} =await clienteAxios.post('/registro', {nombre, email, password})
             setAlerta({
@@ -25,11 +26,13 @@ const RegistroProvider = ({children})=>{
             setNombre(' ');
             setEmail(' ');
             setPassword(' ');
+
         } catch (error) {
             setAlerta({
                 error: true,
                 msg: error.response.data.msg
             })
+            temporizador()
         }
     }
     return (

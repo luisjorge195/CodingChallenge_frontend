@@ -8,10 +8,6 @@ const Login = () => {
     const {handleRegistro, email, password, setEmail, setPassword, nombre, setNombre} = useRegistro();
     const { alerta, setAlerta } = useAlerta();
     const { msg }= alerta;
-    
-    setTimeout(()=>{
-      setAlerta('')
-    },4000)
 
     return (
         <div className="flex h-screen md:bg-[url('assets/galery.jpg')] md:bg-cover  ">
