@@ -33,7 +33,7 @@ const Login = () => {
                             onChange={e => setPassword(e.target.value)} 
                         />
                     </div>
-                    <Link className="text-white font-bold mt-6" to="/logout">¿No tienes una cuenta?. Registráte</Link>
+                    <Link className="md:text-white font-bold mt-6 text-black" to="/logout">¿No tienes una cuenta?. Registráte</Link>
                     <input 
                         type="submit" 
                         value="Iniciar Sesión" 

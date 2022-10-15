@@ -45,16 +45,16 @@ const Header = () => {
     
     return (
         <div >
-            <div className="bg-slate-900 md:w-full md:h-24 md:flex md:justify-between md:items-center ">
+            <div className="bg-slate-900 w-full md:h-24 h-32 flex justify-between items-center ">
                 <div>
                     <h1 className="text-white font-bold text-2xl ml-10 block">BIENVENIDO A MUSEO RIJKSMUSEUM</h1>
                     <h3 className="text-white ml-10 font-bold">Ámsterdam,Países bajos</h3>
                 </div>
-                <div className="flex justify-evenly mt-4 mr-14">
-                    <FontAwesomeIcon onClick={cerrarSesion} className="text-white text-3xl cursor-pointer mr-14" icon={faArrowRightFromBracket} />
+                <div className="md:flex md:justify-evenly md:mt-4 ml-4  md:mr-14">
+                    <FontAwesomeIcon onClick={cerrarSesion} className="text-white text-3xl cursor-pointer mb-2 mt-2 mr-14" icon={faArrowRightFromBracket} />
                     <div>
-                    <div className="overflow-hidden block relative w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
-                        <svg className="absolute -left-block 1 w-12 h-12 text-gray-400 cursor-pointer" onClick={perfil} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
+                    <div className="overflow-hidden  block relative w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+                        <svg className="absolute -left-block 1 w-12 h-12 text-gray-400  cursor-pointer" onClick={perfil} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
                     </div>
                         <h1 className="text-white">{nombre}</h1>
                     </div>

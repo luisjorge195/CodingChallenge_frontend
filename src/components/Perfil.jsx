@@ -29,7 +29,7 @@ const Perfil = () => {
             <div className="bg-slate-900 md:h-32">
                 <div className="md:flex justify-between md:ml-14 items-center ">
                     <div className="flex justify-evenly items-center mt-6 mb-4">
-                        <div className="overflow-hidden  relative w-16 h-16  bg-gray-100  dark:bg-gray-600">
+                        <div className="overflow-hidden  mt-6 relative w-16 h-16  bg-gray-100  dark:bg-gray-600">
                             <svg className="absolute  md:w-14 md:h-14 text-gray-400 cursor-pointer"  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
                         </div>
                         <div className="ml-4">
@@ -37,14 +37,14 @@ const Perfil = () => {
                             <p className="text-white font-bold md:text-xl">{email}</p>
                         </div>
                     </div>
-                    <div className="md:flex md: items-center">
+                    <div className="flex items-center justify-between">
                         <input
-                            className="md:w-full md:mr-7 md:mt-6 cursor-pointer rounded-md bg-white md:p-2"
+                            className="md:w-full md:mr-7 ml-14 md:mt-6 p-1 cursor-pointer rounded-md bg-white md:p-2"
                             type="submit"
                             value="Volver a galeria"
                             onClick = {regresar}
                         /> 
-                        <FontAwesomeIcon onClick = {cerrarSesion}className="text-white text-3xl mt-4 cursor-pointer mr-14" icon={faArrowRightFromBracket} />
+                        <FontAwesomeIcon onClick = {cerrarSesion}className="text-white mb-3 text-3xl mt-4 cursor-pointer mr-14" icon={faArrowRightFromBracket} />
                     </div>
                 </div>
                 <div className="bg-gray-400 md:h-10">
