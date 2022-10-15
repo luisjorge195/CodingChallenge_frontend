@@ -53,7 +53,7 @@ const Perfil = () => {
 
             </div>
             <div className="flex justify-center">
-                <div className={alerta !== '' && "mt-8  md:w-1/2 sm:w-70 bg-slate-800 text-center"}>
+                <div className={alerta !== '' ? "mt-10  md:w-1/2 sm:w-70 bg-slate-800 text-center" : null}>
                     { !alerta.error && <Alertas  alerta={alerta}/>} 
                 </div>
             </div>
