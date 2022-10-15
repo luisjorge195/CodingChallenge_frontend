@@ -26,6 +26,7 @@ const RegistroProvider = ({children})=>{
             setNombre(' ');
             setEmail(' ');
             setPassword(' ');
+            temporizador();
 
         } catch (error) {
             setAlerta({
