@@ -14,7 +14,7 @@ const Header = () => {
 
     const [activo, setActivo] = useState(false);
     const [autor, setAutor] = useState('');
-    
+
     const {alerta, setAlerta}= useAlerta();
 
     const {resultados, setObra, obra, loader} = useListaObras();
@@ -87,7 +87,7 @@ const Header = () => {
                     </datalist>
                 </div>
             </form>
-            <div className={highScroll>=300 ? "fixed top-0 left-0 right-0 z-1 " : null}>
+            <div className={highScroll>=370 ? "fixed top-0 left-0 right-0 z-1 " : null}>
                 <h1 className="text-3xl text-slate-800 bg-white p-4 text-center">Explora nuestra colección de Arte</h1>
                 <div className="flex justify-center">
                     <div className={alerta.error ? "bg-red-800 text-center  md:w-1/2 sm:w-70" : " md:w-1/2 sm:w-70 bg-blue-800 text-center"}>
