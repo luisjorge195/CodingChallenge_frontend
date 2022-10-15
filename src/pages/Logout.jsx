@@ -13,7 +13,7 @@ const Login = () => {
         <div className="flex h-screen md:bg-[url('assets/galery.jpg')] md:bg-cover  ">
             <div className="m-auto md:bg-black opacity-80 brigthnes-60 md:p-10  rounded-xl  border-black md:border-0  sm:bg-white sm:p-5 p-4">
                 
-                <h1 className="text-4xl text-center md:text-white font-bold capitalize text-black">Registro a ExpoArte0</h1>
+                <h1 className="text-4xl text-center md:text-white font-bold capitalize text-black">Registro a ExpoArte</h1>
                 <form className="mt-10" onSubmit={(e)=>handleRegistro(e, setAlerta)}>
                     <div className="">
                         <label className=" uppercase md:text-white block md:text-xl font-bold text-black">Nombre</label>
