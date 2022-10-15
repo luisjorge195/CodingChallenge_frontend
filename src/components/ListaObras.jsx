@@ -19,7 +19,7 @@ const Header = () => {
 
     const {resultados, setObra, obra, loader} = useListaObras();
 
-    const {nombre, token} = useAuth()
+    const {nombre, token, setEmail, setPassword} = useAuth()
     const {favoritos, highScroll} = useFavoritos();
 
     const navigate = useNavigate();
@@ -31,6 +31,8 @@ const Header = () => {
     }
     
     const cerrarSesion = ()=>{
+        setEmail(' ');
+        setPassword(' ');
         navigate('/')
     }
 

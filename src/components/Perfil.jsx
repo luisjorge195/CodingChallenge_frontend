@@ -9,11 +9,13 @@ import ListaFavoritos from './ListaFavoritos.jsx';
 
 const Perfil = () => {
     const navigate = useNavigate();
-    const {nombre, email, token} = useAuth();
+    const {nombre, email, setEmail, setPassword} = useAuth();
     const { listaFavoritos } = useListaFavoritos();
     const { alerta, setAlerta } = useAlerta();
 
     const cerrarSesion = ()=>{
+        setEmail(' ');
+        setPassword(' ');
         navigate('/');
     }
     const regresar = ()=>{
